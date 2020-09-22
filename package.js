@@ -24,6 +24,8 @@ Package.registerBuildPlugin({
 });
 
 Package.onUse(function(api) {
+  api.versionsFrom('METEOR@1.10.2');
+
   api.use('isobuild:minifier-plugin@1.0.0');
 });
 
