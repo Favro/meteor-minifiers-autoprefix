@@ -1,6 +1,6 @@
 import sourcemap from "source-map";
 import { createHash } from "crypto";
-import LRU from "lru-cache";
+import { LRUCache } from "lru-cache";
 
 //START AUTOPREFIX
 import autoprefixer from 'autoprefixer';
@@ -82,7 +82,7 @@ class CssToolsMinifier {
 }
 
 
-const mergeCache = new LRU({
+const mergeCache = new LRUCache({
   max: 100
 });
 
